@@ -33,7 +33,7 @@ const orderSchema = mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ["pending", "failed", "successful"],
+    enum: ["pending", "failed", "success"],
     default: "pending",
   },
   totalPrice: {
@@ -48,6 +48,9 @@ const orderSchema = mongoose.Schema({
   dateOrdered: {
     type: Date,
     default: Date.now(),
+  },
+  transaction_id: {
+    type: String,
   },
 });
 
